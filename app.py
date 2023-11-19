@@ -70,6 +70,10 @@ def generate_frames():
 
 @app.route('/')
 def index():
+    return render_template('Intro.html')
+
+@app.route('/home')
+def home():
     return render_template('home.html')
 
 @app.route('/video_feed')
