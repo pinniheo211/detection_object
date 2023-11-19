@@ -1,0 +1,82 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <h1 class="fs-1 text-primary text-center">Real-time Object Detection</h1>
+    <div class="text-center d-flex justify-content-center" style="padding:30px 40px;gap:40px;">
+{#            <img src="https://www.coreldraw.com/static/cdgs/product_content/cdgs/seo/gaussian-blur-lg.jpg" alt="">#}
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" style="width:50%; height:100%;">
+              <div class="carousel-indicators" >
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000" style="width:100%; height:400px;">
+                  <img src="https://www.coreldraw.com/static/cdgs/product_content/cdgs/seo/gaussian-blur-lg.jpg" class="d-block " alt="...">
+
+                </div>
+                <div class="carousel-item" data-bs-interval="2000" style="width:100%; height:400px;">
+                  <img style="width:100%;height:100%;" src="../static/example/cuong.png" class="d-block" alt="...">
+
+                </div>
+                <div class="carousel-item" style="width:100%;height:400px;">
+                  <img style="width: 100%;height: 100%" src="../static/example/loc.png" class="d-block " alt="...">
+
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="accordion " id="accordionExample" style="width:40%;">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Mô tả real time detection object
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>Real-time Detection-object</strong>  là một nhiệm vụ thị giác máy tính bao gồm việc xác định và định vị các đối tượng quan tâm trong chuỗi video thời gian thực với khả năng suy luận nhanh trong khi vẫn duy trì mức độ chính xác cơ bản.
+
+Vấn đề này thường được giải quyết bằng cách sử dụng các thuật toán kết hợp các kỹ thuật theo dõi và phát hiện đối tượng để phát hiện và theo dõi chính xác các đối tượng trong thời gian thực. Họ sử dụng kết hợp trích xuất tính năng, tạo đề xuất đối tượng và phân loại để phát hiện và bản địa hóa các đối tượng quan tâm.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    YOLOv3(You Only Look Once,version 3)
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>Là thuật toán phát hiện đối tượng theo thời gian thực nhằm xác định các đối tượng cụ thể trong video, nguồn cấp dữ liệu trực tiếp hoặc hình ảnh. Thuật toán học máy YOLO sử dụng các tính năng được học bởi mạng nơ ron tích chập sâu để phát hiện một đối tượng.</p>
+
+
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                   Đọc mô hình YOLOv3
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <p>net = cv2.dnn.readNet("yolo/yolov3.weights", "yolo/yolov3.cfg")
+with open("yolo/coco.names", "r") as f:
+    classes = f.read().strip().split("\n")</p>
+                      <a class="btn btn-success" href="/home">Demo</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+{% endblock %}
